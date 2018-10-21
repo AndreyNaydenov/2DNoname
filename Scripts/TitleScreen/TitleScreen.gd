@@ -1,6 +1,6 @@
 extends TextureRect
 
-var backgroundPicture = preload("res://Textures/title_background.png")
+var backgroundPicture = preload("res://Textures/title/title_background.png")
 var gameTitleFont = preload("res://Fonts/title_dynamic_font.tres")
 
 func _ready():

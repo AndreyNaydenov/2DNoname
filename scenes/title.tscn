@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/TitleScreen/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://scenes/title_menu.tscn" type="PackedScene" id=2]
 
-[node name="Background" type="TextureRect" index="0"]
+[node name="Background" type="TextureRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0

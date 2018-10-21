@@ -22,7 +22,7 @@ func SetButton(button):
 	pass
 
 func _on_QuitButton_pressed():
-	get_tree().change_scene("res://Scenes/title_background.tscn")
+	get_tree().change_scene("res://Scenes/title.tscn")
 	pass
 
 func _on_ContinueButton_pressed():	
