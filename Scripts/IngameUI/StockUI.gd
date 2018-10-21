@@ -12,7 +12,7 @@ func _ready():
 	pass
 
 func _on_door_pressed():
-	get_tree().change_scene("res://scenes/main_ingame_scene.tscn")
+	get_node("/root/GlobalScripts").ChangeScene(preload("res://scenes/shop_scene.tscn"))
 	pass
 
 func SetUI():

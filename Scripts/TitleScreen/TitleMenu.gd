@@ -11,7 +11,7 @@ func _ready():
 	get_child(0).connect("pressed", self, "_on_NewGameBut_pressed")
 
 	for i in range(0, 4):
-		SetButton(get_child(i))
+		SetButton(get_child(i))		
 	pass
 
 func SetButton(button):
@@ -22,7 +22,7 @@ func SetButton(button):
 	pass
 
 func _on_NewGameBut_pressed():
-	get_tree().change_scene("res://Scenes/main_ingame_scene.tscn")
+	get_node("/root/GlobalScripts").ChangeScene(preload("res://scenes/shop_scene.tscn"))
 	pass
 
 func _on_QuitButton_pressed():

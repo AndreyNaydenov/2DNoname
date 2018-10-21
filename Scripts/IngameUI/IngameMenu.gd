@@ -22,9 +22,9 @@ func SetButton(button):
 	pass
 
 func _on_QuitButton_pressed():
-	get_tree().change_scene("res://Scenes/title.tscn")
+	get_node("/root/GlobalScripts").ChangeScene(preload("res://scenes/title.tscn"))
 	pass
 
-func _on_ContinueButton_pressed():	
+func _on_ContinueButton_pressed():
 	get_parent().remove_child(self)
 	pass

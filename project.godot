@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="2DNonname"
-run/main_scene="res://scenes/title.tscn"
+run/main_scene="res://scenes/main_scene.tscn"
 config/icon="res://Textures/icon.png"
 
 [display]
