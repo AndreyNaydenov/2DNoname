@@ -9,9 +9,9 @@ func _ready():
 
 func _on_MenuButton_pressed():
 	var sceneInstance = menuScene.instance()
-	add_child(sceneInstance)
+	get_parent().add_child(sceneInstance)
 	pass
 
 func _on_StockButton_pressed():
-	get_node("/root/GlobalScripts").ChangeScene(preload("res://scenes/stock.tscn"))
+	SceneManager.ChangeScene(preload("res://scenes/stock.tscn"))
 	pass

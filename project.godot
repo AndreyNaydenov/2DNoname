@@ -14,6 +14,12 @@ config/name="2DNonname"
 run/main_scene="res://scenes/main_scene.tscn"
 config/icon="res://Textures/icon.png"
 
+[autoload]
+
+MainCharacter="*res://Scripts/GlobalScripts/MainCharacter.gd"
+WindowsInfo="*res://Scripts/GlobalScripts/WindowsInfo.gd"
+SceneManager="*res://Scripts/GlobalScripts/SceneManager.gd"
+
 [display]
 
 window/size/width=1920

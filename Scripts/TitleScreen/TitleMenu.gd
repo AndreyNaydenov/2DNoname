@@ -22,7 +22,7 @@ func SetButton(button):
 	pass
 
 func _on_NewGameBut_pressed():
-	get_node("/root/GlobalScripts").ChangeScene(preload("res://scenes/shop_scene.tscn"))
+	SceneManager.ChangeScene(preload("res://scenes/shop_scene.tscn"))
 	pass
 
 func _on_QuitButton_pressed():

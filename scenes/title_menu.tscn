@@ -4,7 +4,7 @@
 [ext_resource path="res://Textures/title_button.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/dynamic_font.tres" type="DynamicFont" id=3]
 
-[node name="Buttons" type="VBoxContainer"]
+[node name="Buttons" type="VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -219,7 +219,5 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
-
-[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
 
 

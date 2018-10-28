@@ -12,8 +12,7 @@
 [ext_resource path="res://Fonts/door_but_dynamic_font.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Textures/shop/decline_button_normal.png" type="Texture" id=11]
 
-
-[node name="Shop" type="TextureRect"]
+[node name="Shop" type="TextureRect" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -250,7 +249,5 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
 
 
