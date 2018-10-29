@@ -63,7 +63,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/normal_font = ExtResource( 3 )
-bbcode_enabled = false
+bbcode_enabled = true
 bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
@@ -71,10 +71,10 @@ meta_underlined = true
 tab_size = 4
 text = ""
 scroll_active = true
-scroll_following = false
+scroll_following = true
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Mouse" ]
+_sections_unfolded = [ "BBCode", "Mouse" ]
 
 [node name="NpcIcon" type="TextureRect" parent="." index="2"]
 

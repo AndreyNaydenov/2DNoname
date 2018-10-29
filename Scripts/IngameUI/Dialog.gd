@@ -72,44 +72,41 @@ func ClearOptions():
 #Добавляет в историю диалога новую строку
 func AddToHistory(textToAdd, isMcLine):
 	if isMcLine:
-		historyText += MainCharacter.mcName + ": "
-	else: 
-		historyText += npcName + ": "
-		
-	historyText += textToAdd + "\n\n"
-	dialogHistory.text = historyText
+		dialogHistory.append_bbcode("[color=#D8DB42]ГГ: [/color]")
+	else:
+		dialogHistory.append_bbcode("[color=#FF1418]" + npcName + ": [/color]")
+	
+	dialogHistory.append_bbcode("[color=#ffffff]"+ textToAdd + "\n\n[/color]")
 	pass
 	
 #Продвинуть диалог
-func ExpandDialog(dialogFileName):	
+func ExpandDialog(dialogFileName):
+	var fileLine = ""
 	var dialogFile = File.new()
-	dialogFile.open(npcDialogPath + dialogFileName, File.READ)
+	dialogFile.open(npcDialogPath + dialogFileName + ".res", File.READ)
 	
-	#Определяем тип файла (histoty и option)
+	#Определяем тип файла (npcline или option)
 	var isHistory
 	if(dialogFile.get_line() == "#NPCLINE"):
 		isHistory = true
 	else:
 		isHistory = false
 		
-	if(isHistory):	
+	if(isHistory):
 		#Обработка реплики
 		#Добавляем реплику
-		var contentStr = ""
-		var fileLine = dialogFile.get_line()
-		while( fileLine != "#line"):
-			fileLine = dialogFile.get_line()
-		fileLine = dialogFile.get_line()
-		AddToHistory(fileLine, false)
+		while(dialogFile.get_line() != "#line"):
+			pass
+		AddToHistory(dialogFile.get_line(), false)
 	
 		#Добавляем опции
 		var optionsFile = File.new()
-		while( fileLine != "#options"):
-			fileLine = dialogFile.get_line()
+		while(dialogFile.get_line() != "#options"):
+			pass
 		fileLine = dialogFile.get_line()
 		while( fileLine != ""):
 			optionsNames.append(fileLine)
-			optionsFile.open(npcDialogPath + fileLine, File.READ)
+			optionsFile.open(npcDialogPath + fileLine + ".res", File.READ)
 			while(optionsFile.get_line() != "#line"):
 				pass
 			AddOption(optionsFile.get_line())
@@ -118,16 +115,14 @@ func ExpandDialog(dialogFileName):
 	else:
 		#Обработка опции
 		#Добавляем реплику в историю
-		var fileLine = dialogFile.get_line()
-		while( fileLine != "#line"):
-			fileLine = dialogFile.get_line()
+		while( dialogFile.get_line() != "#line"):
+			pass
 		AddToHistory(dialogFile.get_line(), true)
 		
 		#Продвигаем диалог
-		while( fileLine != "#npcline"):
-			fileLine = dialogFile.get_line()
-		fileLine = dialogFile.get_line()
-		ExpandDialog(fileLine)
+		while(dialogFile.get_line() != "#npcline"):
+			pass
+		ExpandDialog(dialogFile.get_line())
 		
 		#Выполняем действия опции
 		while(dialogFile.get_line() != "#action"):
@@ -142,10 +137,10 @@ func ExpandDialog(dialogFileName):
 
 func ProcessAction(actionLine):
 	if actionLine == "end":
-		dialogHistory.text += "				*Конец Диалога*"
+		dialogHistory.add_text("				*Конец Диалога*")
 		npcNode.GoOut()
 	pass
-	
+
 func _on_Option_pressed(option):
 	ClearOptions()
 	ExpandDialog(optionsNames[option.get_index()])

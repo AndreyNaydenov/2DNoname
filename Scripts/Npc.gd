@@ -10,7 +10,7 @@ func _ready():
 	connect("pressed", self, "_char_pressed")
 	pass
 
-func SetChar(name):
+func SetNPC(name):
 	charName = name
 	texture_normal = load("res://Textures/npc/chars/" + charName + ".png")
 	pass

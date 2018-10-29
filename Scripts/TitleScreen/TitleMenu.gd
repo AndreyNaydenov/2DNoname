@@ -5,7 +5,7 @@ var buttonPictureHovered = preload("res://Textures/title_button_hovered.png")
 var buttonPicturePressed = preload("res://Textures/title_button_pressed.png")
 var textFont = preload("res://Fonts/dynamic_font.tres")
 
-func _ready():	
+func _ready():
 	
 	get_child(3).connect("pressed", self, "_on_QuitButton_pressed")
 	get_child(0).connect("pressed", self, "_on_NewGameBut_pressed")
@@ -22,7 +22,7 @@ func SetButton(button):
 	pass
 
 func _on_NewGameBut_pressed():
-	SceneManager.ChangeScene(preload("res://scenes/shop_scene.tscn"))
+	SceneManager.ChangeScene(load("res://scenes/shop_scene.tscn"))
 	pass
 
 func _on_QuitButton_pressed():

@@ -7,7 +7,7 @@ var doorNormal = preload("res://Textures/stock/door_button_normal.png")
 var doorHover = preload("res://Textures/stock/door_button_hover.png")
 
 func _ready():
-	SetUI()	
+	SetUI()
 	get_child(0).connect("pressed", self, "_on_door_pressed")
 	pass
 

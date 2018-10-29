@@ -1,6 +1,7 @@
 extends TextureRect
 
-var menuScene = preload("res://scenes/ingame_menu.tscn")
+var menuScene = load("res://scenes/ingame_menu.tscn")
+var stockScene = load("res://scenes/stock.tscn")
 
 func _ready():
 	get_node("MenuButton").connect("pressed", self, "_on_MenuButton_pressed")
@@ -13,5 +14,5 @@ func _on_MenuButton_pressed():
 	pass
 
 func _on_StockButton_pressed():
-	SceneManager.ChangeScene(preload("res://scenes/stock.tscn"))
+	SceneManager.ChangeScene(stockScene)
 	pass
