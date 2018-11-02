@@ -6,7 +6,7 @@
 [ext_resource path="res://Textures/npc/icons/char_test.png" type="Texture" id=4]
 [ext_resource path="res://Textures/dialog/close_button.png" type="Texture" id=5]
 
-[node name="Dialog" type="TextureRect" index="0"]
+[node name="Dialog" type="TextureRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -82,10 +82,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 633.0
-margin_top = 2.0
-margin_right = 707.0
-margin_bottom = 62.0
+margin_left = 662.0
+margin_top = 5.0
+margin_right = 718.0
+margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -103,10 +103,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 727.0
-margin_top = 9.0
-margin_right = 777.0
-margin_bottom = 59.0
+margin_left = 722.0
+margin_top = 7.0
+margin_right = 772.0
+margin_bottom = 57.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2

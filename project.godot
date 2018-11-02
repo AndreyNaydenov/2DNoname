@@ -18,12 +18,16 @@ config/icon="res://Textures/icon.png"
 
 MainCharacter="*res://Scripts/GlobalScripts/MainCharacter.gd"
 WindowsInfo="*res://Scripts/GlobalScripts/WindowsInfo.gd"
+JsonManager="*res://Scripts/GlobalScripts/JsonManager.gd"
 SceneManager="*res://Scripts/GlobalScripts/SceneManager.gd"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
+window/size/resizable=false
+window/size/test_width=1200
+window/size/test_height=700
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

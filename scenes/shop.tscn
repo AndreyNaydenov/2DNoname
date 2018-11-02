@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Textures/shop/shop_0.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/IngameUI/ShopButtons.gd" type="Script" id=2]
@@ -8,9 +8,10 @@
 [ext_resource path="res://Textures/shop/stock_door_normal.png" type="Texture" id=6]
 [ext_resource path="res://Textures/shop/menu_button_normal.png" type="Texture" id=7]
 [ext_resource path="res://Textures/shop/menu_button_hovered.png" type="Texture" id=8]
-[ext_resource path="res://Textures/shop/let_in_button_normal.png" type="Texture" id=9]
-[ext_resource path="res://Fonts/door_but_dynamic_font.tres" type="DynamicFont" id=10]
-[ext_resource path="res://Textures/shop/decline_button_normal.png" type="Texture" id=11]
+[ext_resource path="res://Textures/shop/mc_inv_button.png" type="Texture" id=9]
+[ext_resource path="res://Textures/shop/let_in_button_normal.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/door_but_dynamic_font.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Textures/shop/decline_button_normal.png" type="Texture" id=12]
 
 [node name="Shop" type="TextureRect"]
 
@@ -130,7 +131,31 @@ texture_hover = ExtResource( 8 )
 expand = true
 _sections_unfolded = [ "Textures" ]
 
-[node name="DoorButtons" type="HBoxContainer" parent="." index="4"]
+[node name="MCInvButton" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 844.0
+margin_top = 996.0
+margin_right = 1032.0
+margin_bottom = 1088.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 9 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="DoorButtons" type="HBoxContainer" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -168,7 +193,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 9 )
+texture_normal = ExtResource( 10 )
 expand = true
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
@@ -188,7 +213,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 11 )
 custom_colors/font_color = Color( 0.996094, 0.513611, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.261108, 0.726563, 0, 1 )
 text = "Let In"
@@ -219,7 +244,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 11 )
+texture_normal = ExtResource( 12 )
 expand = true
 _sections_unfolded = [ "Size Flags", "Textures" ]
 
@@ -239,7 +264,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 11 )
 custom_colors/font_color = Color( 0.996094, 0.513611, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.992188, 0, 0.139526, 1 )
 text = "Decline"

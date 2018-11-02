@@ -8,12 +8,13 @@ func _ready():
 	add_child(currentScene)
 	pass
 
-func _process(delta):
-	if Input.is_key_pressed(KEY_Z):
-		var charact = preload("res://scenes/npc.tscn").instance()
-		currentScene.add_child(charact)
-		charact.SetNPC("char_test")
-	pass
+#Спавн НПС на клавишу Z
+func _input(event):
+	if event is InputEventKey:
+		if event.is_pressed() and event.scancode == KEY_Z:
+			var charact = preload("res://scenes/npc.tscn").instance()
+			currentScene.add_child(charact)
+			charact.SetNPC("char_test")
 
 #Функция смены сцены
 func ChangeScene(scene):
